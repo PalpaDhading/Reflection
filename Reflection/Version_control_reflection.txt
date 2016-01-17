@@ -1,4 +1,4 @@
 Version controls is giving full confidence .
 
 Now that you have your workspace set up, what do you want to try using Git for?
-> use for every thing 
+> use for every thing  about git , git add , git commit , git status etc.
