@@ -1,2 +1,0 @@
-How is the staging area different from the working directory and the repository? What value do you think it offers?
-It give control for the files you commit and give better perpective , repository and working directory are  more physical and staging area is more vertual . This is the place where git commit takes place .
