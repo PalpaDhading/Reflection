@@ -1,2 +1,113 @@
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 It give control for the files you commit and give better perpective , repository and working directory are  more physical and staging area is more vertual . This is the place where git commit takes place .
+
+macpro ((bafc65b...) *) asteroids $ git diff --staged
+macpro ((bafc65b...) *) asteroids $ git reset --hard
+HEAD is now at bafc65b add delay back to bullets
+macpro ((bafc65b...)) asteroids $ git diff
+macpro ((bafc65b...)) asteroids $ git status
+HEAD detached from 3884eab
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	pappu-pakia/
+
+nothing added to commit but untracked files present (use "git add" to track)
+macpro ((bafc65b...)) asteroids $ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+macpro ((2c52002...)) versionTest $ git checkout
+macpro ((2c52002...)) versionTest $ git status
+HEAD detached at 2c52002
+nothing to commit, working directory clean
+macpro ((2c52002...)) versionTest $ git diff
+macpro ((2c52002...)) versionTest $ git diff --staged
+macpro ((2c52002...)) versionTest $ 
+
+How can you use the staging area to make sure you have one commit per logical change?  Using >git diff --staged and >git log and >git status 
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?  one of the branches will be there untouched and undamaged .
+
+// git log --graph --oneline master coins
+macpro (master) asteroids $ git log --graph --oneline master coins
+
+macpro (master) asteroids $ git log --graph --oneline master coins
+* 3884eab Add color
+* 3e42136 now using requestAnimationFrame
+* 4035769 frame interval was set wrong after game was paused
+* 25ede83 a couple missing ends with the ipad version
+* df03538 I can't spell 'screen' apparently :)
+| * 354dfdd Make ships able to spawn on coins
+| * 0c6daf1 Make it possible to collect coins
+| * a3c0ae4 Create helper functions
+| * 656b02e First pass at adding coins
+|/  
+* b0678b1 Revert controls
+* f19cb1b Fix typo in space
+* 75928a9 Use space for movement and enter for shooting
+* ac83b72 mostly finished ipad version
+* 7ca4826 trying to get div touch controls to work
+* 3cb406e first pass at ipad controls
+* fe7993e now capturing down key so people don't accidently scroll the page
+* 343935f added license
+* 80f3bc7 increased canvas size
+* 7dc3de0 made the framerate counter dumb but more accurate
+* f077ea3 added pointInPolygon method for moz
+* 5cb7bed added reverseTransform method
+* a53b00a trying to get ff collision detection working
+
+~~~~~~~~~~~~~~~~
+macpro (master *) asteroids $ git log --graph --oneline
+*   90ab3b7 Merge branch 'coins'
+|\  
+| * 354dfdd Make ships able to spawn on coins
+| * 0c6daf1 Make it possible to collect coins
+| * a3c0ae4 Create helper functions
+| * 656b02e First pass at adding coins
+* | 8642d7d game.js is modified with delaybeforeBullet =10;
+* | 3884eab Add color
+* | 3e42136 now using requestAnimationFrame
+* | 4035769 frame interval was set wrong after game was paused
+* | 25ede83 a couple missing ends with the ipad version
+* | df03538 I can't spell 'screen' apparently :)
+|/  
+* b0678b1 Revert controls
+* f19cb1b Fix typo in space
+* 75928a9 Use space for movement and enter for shooting
+* ac83b72 mostly finished ipad version
+* 7ca4826 trying to get div touch controls to work
+* 3cb406e first pass at ipad controls
+* fe7993e now capturing down key so people don't accidently scroll the page
+* 343935f added license
+* 80f3bc7 increased canvas size
+* 7dc3de0 made the framerate counter dumb but more accurate
+* f077ea3 added pointInPolygon method for moz
+* 5cb7bed added reverseTransform method
+* a53b00a trying to get ff collision detection working
+* 1e47136 matrix really only needs to be a 2x3
+* 186453f small changes
+* c0b670e you get 200 Quatloos for shooting a big flying saucer
+* c808f10 bigalien now crosses and disappears
+* c588345 move lives out of Ship
+* 4bb6bf0 whole lot of refactoring
+* 5a54ab9 got the flying saucer working
+* f421d99 made ship rotate faster
+* 649ccbb collisions now work on dupes
+* 1c3ea2d no longer a border, duping rendering on the edges
+:
+~~~~~~~~~~
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+ yes
+
+~~~~~~~~~~~~~~~~~~
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Mannualy is helps to preserve the work done over time 
+
+~~~~~~~~~~~~~~~~~~~~~~
+gitHub :PalpaDhading ->Palpa123
+~~~~~~~~~~~~~
+
+
